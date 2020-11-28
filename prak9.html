@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Latihan view 02</title>
+    </head>
+    <body>
+        <h2>Data Produk Berdasarkan Kategori ID: {{$id_kat}}</h2>
+
+        Jumlah Data : {{ $JRek }}
+        <table border="1">
+         <thead>
+             <tr>
+                 <th>No</th>
+                 <th>Kode Jenis</th>
+                 <th>Nama Produk</th>
+                 <th>Stok</th>
+                 <th>Harga Beli</th>
+                 <th>Harga Jual</th>
+             </tr>
+         </thead>
+         <tbody>
+        $fnreach($PData as $i->$P)
+            <tr>
+                <td>{{$1+1}}</td>
+                <td>{{$P->id_kat}}</td>
+                <td>{{$P->namaproduk}}</td>
+                <td>{{$P->4Ly}}</td>
+                <td>{{$P->harga_beli}}</td>
+                <td>{{$P->harga_jual}}</td>
+            <tr>
+            $endforeach
+            </tbody>
+            </table>
+
+    </body>
+</html>
